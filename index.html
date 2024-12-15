@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTBK Tryout App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9f3;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff7f3f;
+            color: white;
+            padding: 2px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .feature {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        .feature img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-details {
+            flex: 1;
+        }
+
+        .feature-details h3 {
+            color: #ff7f3f;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta button {
+            padding: 12px 25px;
+            background-color: #ff7f3f;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta button:hover {
+            background-color: #e5672a;
+            transform: translateY(-2px);
+        }
+
+        .decorative-line {
+            width: 60px;
+            height: 4px;
+            background-color: #ff7f3f;
+            margin: 10px auto 20px;
+        }
+
+        .feature:hover {
+            transform: translateY(-3px);
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff7f3f;
+            color: white;
+            margin-top: 20px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .exam-container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            display: none;
+        }
+
+        .exam-container h2 {
+            text-align: center;
+            color: #ff7f3f;
+        }
+
+        .exam-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .exam-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff9f3;
+            border: 1px solid #ff7f3f;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .exam-list li:hover {
+            background-color: #ffe1cc;
+        }
+    </style>
+    <script>
+        function showExamPage() {
+            document.querySelector('.container').style.display = 'none';
+            document.querySelector('.exam-container').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Lolosin</h1>
+        <p>Solusi mudah lolos UTBK!</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Fitur Unggulan</h2>
+            <div class="decorative-line"></div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/100" alt="Dashboard">
+                <div class="feature-details">
+                    <h3>Dashboard Performansi</h3>
+                    <p>Pantau perkembangan belajar Anda dengan statistik detail dan grafik interaktif.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/100" alt="Tryout">
+                <div class="feature-details">
+                    <h3>Latihan Soal dan Tryout</h3>
+                    <p>Akses ribuan soal UTBK lengkap dengan pembahasan dan skor otomatis.</p>
+                </div>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/100" alt="Materi">
+                <div class="feature-details">
+                    <h3>Rangkuman Materi</h3>
+                    <p>Pelajari teori penting dengan slide, video, dan catatan singkat.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta">
+            <button onclick="showExamPage()">Mulai Sekarang</button>
+        </div>
+    </div>
+
+    <div class="exam-container">
+        <h2>Pilih Jenis Ujian</h2>
+        <ul class="exam-list">
+            <li onclick="alert('Menuju ke Penalaran Umum')">Penalaran Umum</li>
+            <li onclick="alert('Menuju ke Pengetahuan Umum')">Pengetahuan Umum</li>
+            <li onclick="alert('Menuju ke Pemahaman Membaca')">Pemahaman Membaca</li>
+            <li onclick="alert('Menuju ke Matematika Dasar')">Matematika Dasar</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; Lolosin App. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
